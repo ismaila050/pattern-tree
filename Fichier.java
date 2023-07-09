@@ -1,15 +1,9 @@
 public class Fichier extends SystemeDeFichier {
+    public Fichier(String name) {
+        this.name = name;
+    }
 
-	//pas la peine de definir des attributs on a besoin que lister les fichiers?
-	
-	/*Constructeur*/
-	public Fichier(String name){
-		this.name = name;
-	}
-
-	//methode afficher simple
-	public void afficher(){
-		System.out.println(name);
-	}
-
+    public void afficher(String prefix) {
+        System.out.println(prefix + "├── " + name); //pour l'instant pour l'affichage on aura<prefix>├── fichier.txt selon sa place
+    }
 }
